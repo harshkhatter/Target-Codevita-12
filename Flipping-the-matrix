@@ -1,0 +1,40 @@
+# https://www.hackerrank.com/contests/target-codevita-11/challenges/flipping-the-matrix
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the flippingMatrix function below.
+def flippingMatrix(matrix):
+    A = matrix
+    N=2*n-1 
+    
+    # check the maximum value in max(A[i][j],A[i][N-j],A[N-i][j],A[N-i][N-j])
+    
+    # iterate the loop for all rows and columns to check the max sum
+    return sum( max(A[i][j],A[i][N-j],A[N-i][j],A[N-i][N-j]) for i in range(n) for j in range(n) )
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    q = int(input())
+
+    for q_itr in range(q):
+        n = int(input())
+
+        matrix = []
+
+        for _ in range(2*n):
+            matrix.append(list(map(int, input().rstrip().split())))
+
+        result = flippingMatrix(matrix)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+# https://www.hackerrank.com/contests/target-codevita-11/challenges/flipping-the-matrix
