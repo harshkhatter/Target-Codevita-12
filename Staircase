@@ -1,0 +1,25 @@
+# https://www.hackerrank.com/challenges/staircase/problem
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the staircase function below.
+def staircase(n):
+    #Declare a string with a whitespace
+    s= " "
+    
+    # iterate the loop till printed pattern prints
+    for i in range(1,n+1):
+        print(s*(n-i)+ '#'*i)
+    
+if __name__ == '__main__':
+    n = int(input())
+
+    staircase(n)
+
+# https://www.hackerrank.com/challenges/staircase/problem
